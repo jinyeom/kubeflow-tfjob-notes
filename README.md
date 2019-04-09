@@ -90,8 +90,8 @@ ks param set decompress-data-job pathToModel ${PRE_TRAINED_MODEL_PATH}
 ks apply ${ENV} -c decompress-data-job
 ```
  
-The tutorial also includes a step where a job for creating `TFRecords`, which is fortunate for us, since we're also going to be using the
-same format. Let's keep this in mind. This is done as follows,
+The tutorial also includes a step where a job for creating `TFRecords`. Fortunately for us, we're going to be using the same format. 
+Let's keep this in mind. This is done as follows,
 
 ```
 OBJ_DETECTION_IMAGE="lcastell/pets_object_detection"
@@ -108,7 +108,6 @@ ks apply ${ENV} -c create-pet-record-job
 ```
 
 Note that all these changes to parameters can be seen in `${APP}/components/params.libsonnet`.
-
 
 ### Submitting a training job
 In this section, we deploy and launch a TensorFlow training job. You could build a Docker image for training yourself, but to save time we'll
